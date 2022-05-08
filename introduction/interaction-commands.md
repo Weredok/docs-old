@@ -39,7 +39,7 @@ module.exports = {
 name: "mtrx", // Название кнопки
 type: "interaction",
 prototype: "button",
-code: `$interactionReply[wokin gay]`
+code: `$interactionReply[wokin is cool]`
 }
 ```
 **Доступные стили кнопки**
