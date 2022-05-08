@@ -14,6 +14,7 @@ module.exports = {
 name: "eval", //Название команды, которое будет использоваться
 code: `$eval[$message;yes]
 $onlyForIds[$botOwnerId;]`
+}
 ```
 
 Перезагружаем бота и тестируем. Всё работает!
