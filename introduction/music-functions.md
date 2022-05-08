@@ -1,21 +1,16 @@
-# 
-aoi.js has an extension named ***"@akarui/aoi.music"*** for music.
+# Музыкальные функции
 
-## Installation
+Для использования музыкальных функций необходимо установить дополнительный пакет `@akarui/aoi.music`
 
-> ```
-> npm i @akarui/aoi.music
-> ```
+## Установка
 
-***for Dev Version***
+```
+npm i @akarui/aoi.music
+```
 
-> ```
-> npm i @akarui/aoi.music@dev
-> ```
+## Настройка в aoi.js
 
-### Setting up in aoi.js
-
-After installing aoi.music, to connect it with aoi.js , we are going to use aoi.js' Voice class.
+После установки aoi.music, нужно настроить отдельный класс для музыки в aoi.js.
 
 ```js
 const { Voice, LoadCommands, Bot } = require("aoi.js");
@@ -32,32 +27,20 @@ const voice = new Voice(
   bot,
   {
     cache: {
-      cacheType: "Memory",//Disk
+      cacheType: "Memory",//Кэш
       enabled: true,
-      //directory : "music", only for Disk type
-    },
-    soundcloud: {
-      clientId : "SOUNDCLOUD CLIENT ID",
-      limitLikeTrack : 200 
-    },//optional
-  playerOptions: {
-    trackInfoInterval: 5000,
-  },//optional
+    }
   },
-  true, //to enable pruneMusic 
+  true, //для включения pruneMusic 
 );
 
 voice.onTrackStart();
 
-loader.load(bot.cmd, "./Commands/commands/"); //bot cmds
-loader.load(voice.cmd, "./Commands/voice/"); //voice cmds
+loader.load(bot.cmd, "./Commands/commands/"); //загрузчик обычных команд
+loader.load(voice.cmd, "./Commands/voice/"); //загрузчик музыкальных команд
 ```
 
-## Using Voice class
-
-As we added Voice class in index.js, and a loader to voice folder,
-setup for Voice class is complete. Let’s create some voice related commands.
-
+## Использование пакета после установки и настройки
 
 ### play
 
@@ -65,7 +48,7 @@ setup for Voice class is complete. Let’s create some voice related commands.
 //Commands/commands/play.js
 module.exports = {
   name: "play youtube",
-  $if: "v4", //enabling pseudo $if
+  $if: "v4", //включает старое использование $if
   code: `
     $let[msg;$playTrack[youtube;$message]]
 
@@ -73,8 +56,8 @@ module.exports = {
         $joinVc
     $endif
 
-    $onlyif[($voiceId[$clientId]!=)&&($voiceId[$clientId]==$voiceId);you are not in the same voice channel]
-    $onlyif[$voiceId!=;join a voice channel before using play cmd]
+    $onlyif[($voiceId[$clientId]!=)&&($voiceId[$clientId]==$voiceId);присоеденись к голосовому каналу в котором находится бот]
+    $onlyif[$voiceId!=;присоеденись к голосовому каналу чтобы слушать музыку]
     `,
 };
 ```
@@ -86,27 +69,26 @@ module.exports = {
 module.exports = {
   name: "queue",
   code: `
-   $title[1;Queue]
-   $author[1;Requested By $usertag;$authorAvatar]
+   $title[1;Очередь]
    $description[1;$queue[$if[$message==;1;$message]]]
-   $footer[1;number of songs ->$queueLength]
+   $footer[1;Количество треков в очереди - $queueLength]
    $color[1;RANDOM]
    $addTimestamp[1]
     `,
 };
 ```
 
-### onTrackStart event
+### onTrackStart ивент
 
 ```js
 //Commands/voice/trackStart.js
 module.exports = {
-  name: "send when track starts", //optional
+  name: "отправляется когда начинает играть новый трек", //необязательно
   type : "trackStart",
   channel : "$channelId",
   code: `
-	  $title[1;Now Playing...]
-	  $description[1;$if[$musicEventData[info.description]==;description not available;$musicEventData[info.description]]]
+	  $title[1;Сейчас играет]
+	  $description[1;$if[$musicEventData[info.description]==;описание не найдено;$musicEventData[info.description]]]
       $color[1;RANDOM]
 	  $author[1;$musicEventData[info.title]]
 	  $image[1;$musicEventData[info.thumbnail]]
