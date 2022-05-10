@@ -46,7 +46,7 @@ yarn add aoi.js
 ```
 
 ## Пример использования
-```js
+```javascript
 const aoijs = require("aoi.js")
 
 const bot = new aoijs.Bot({
