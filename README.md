@@ -28,11 +28,12 @@
 
 ## Возможности
 
-- Мо
-- Written in TypeScript to easily provide functional errors.
-- Updated with several extensions supported from [Akarui Development](https://github.com/AkaruiDevelopment/) sideloading. 
+- Мощные функции с лёгким использованием!
+- Написано на TypeScript для удобства находить ошибки в функциях.
+- Обновлено с поддержкой других расширений от [Akarui Development](https://github.com/AkaruiDevelopment/). 
+- Структура и функционал взят из [dbd.ts](https;//npmjs.org/package/dbd.ts)
 
-## Install
+## Установка
 
 ```bash
 npm install aoi.js
@@ -42,22 +43,22 @@ npm install aoi.js
 yarn add aoi.js
 ```
 
-## Example 
+## Пример
 
 ```javascript
 const { AoiClient } = require("aoi.js");
 
 const bot = new AoiClient({
-    token: "DISCORD BOT TOKEN",
+    token: "ТОКЕН",
     intents: ["Guilds", "GuildMessages", "MessageContent"],
-    prefix: "DISCORD BOT PREFIX"
+    prefix: "ПРЕФИКС"
 })
 
 bot.addEvent("onMessage")
 
 bot.commands.add("basicCommand", {
     name: "ping",
-    code: `Pong! $pingms`
+    code: `Понг! $pingms`
 })
 
 bot.start()
