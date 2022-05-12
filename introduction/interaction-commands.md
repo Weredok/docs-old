@@ -54,3 +54,21 @@ code: `$interactionReply[wokin is cool]`
 - `$interactionUpdate` - обновляет сообщение при взаимодействии
 - `$interactionEdit` - изменяет сообщение при взаимодействии
 - `$interactionDelete` - удаляет сообщение, сделарное при помощи функции `$interactionReply`
+
+
+### Взаимодействие только для автора (пример для кнопки)
+
+```js
+module.exports = [{
+name: "ban",
+code: `$addButton[1;Да!;3;wokinban_$authorID] //В названии функции нужно указать название кнопки и функцию $authorID
+Забанить вокина?
+$onlyIf[$hasPerms[$guildID;$authorID;admin]==true;]`
+}, {
+//Название не нужно указывать
+type: "interaction",
+prototype: "button",
+code: `$ban[373838708673347584] //Код
+
+$onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];Вы не можете забанить вокина, потому что не являетесь автором кнопки!] //Проверка айди, который указан в названии кнопки + ошибка.
+$onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==wokinban;] //Проверка названия кнопки
