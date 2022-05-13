@@ -53,7 +53,7 @@ code: `$interactionReply[wokin is cool]`
 - `$interactionReply` - ответ на сообщение без ошибки взаимодействия
 - `$interactionUpdate` - обновляет сообщение при взаимодействии
 - `$interactionEdit` - изменяет сообщение при взаимодействии
-- `$interactionDelete` - удаляет сообщение, сделарное при помощи функции `$interactionReply`
+- `$interactionDelete` - удаляет сообщение, сделаное при помощи функции `$interactionReply`
 
 
 ### Взаимодействие только для автора (пример для кнопки)
