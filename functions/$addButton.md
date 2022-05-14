@@ -16,6 +16,6 @@ $addButton[index;label;style;customID;disabled?;emoji?]
 
 `disabled?` - Выключена кнопка или нет (yes или no)
 
-`emoji?` - Пользовательский эмоджи возле текста на кнопке. Используйте <name:id:>
+`emoji?` - Пользовательский эмоджи возле текста на кнопке. Используйте `<name:id:>`
 
-## [Пример использования](https://github.com/Weredok/aoijs-ru-documentation/blob/main/introduction/interaction-commands.md#%D0%BA%D0%BD%D0%BE%D0%BF%D0%BA%D0%B8)
+## [Пример использования тут](https://github.com/Weredok/aoijs-ru-documentation/blob/main/introduction/interaction-commands.md#%D0%BA%D0%BD%D0%BE%D0%BF%D0%BA%D0%B8)
