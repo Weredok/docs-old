@@ -71,4 +71,7 @@ prototype: "button",
 code: `$ban[373838708673347584] //Код
 
 $onlyIf[$advancedTextSplit[$interactionData[customId];_;2]==$interactionData[author.id];Вы не можете забанить вокина, потому что не являетесь автором кнопки!] //Проверка айди, который указан в названии кнопки + ошибка.
-$onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==wokinban;] //Проверка названия кнопки
+$onlyIf[$advancedTextSplit[$interactionData[customId];_;1]==wokinban;] //Проверка названия кнопки`
+
+}]
+```
