@@ -8,7 +8,7 @@
   * [Статус бота](introduction/client-status.md)
   * [Использование загрузчика команд](introduction/command-handler.md)
   * [Интерактивные взаимодействия](introduction/interaction-commands.md)
-* Функции
+ Функции
 
  * [$addButton](functions/$addButton.md)
  * [$authorID](functions/$authorID.md)
