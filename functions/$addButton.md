@@ -1,5 +1,5 @@
 # $addButton
-
+Добавляет кнопку к сообщению бота
 ## Использование
 ```js
 $addButton[index;label;style;customID;disabled?;emoji?]
