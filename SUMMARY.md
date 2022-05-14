@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Главная](README.md)
-* [Вступление]
+* Вступление
 
   * [Настройка псевдонимов для команд.](introduction/aliases.md)
   * [Заменители символов](introduction/character-escaping.md)
@@ -11,3 +11,4 @@
 * Функции
 
  * [$addButton](functions/$addButton.md)
+ * [$authorID](functions/$authorID.md)
