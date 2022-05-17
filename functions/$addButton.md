@@ -6,7 +6,7 @@ $addButton[index;label;style;customID;disabled?;emoji?]
 ```
 
 ### Опции
--`index` - Индекс сообщения
+- `index` - Индекс сообщения
 
 - `label` - Текст, отображаемый на кнопке
 
