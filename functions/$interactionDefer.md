@@ -1,9 +1,20 @@
-Контент - контент сообщения
-Эмбеды - эмбеды в виде {newEmbed:}
-Компоненты - строка компонентов в виде {actionRow:}
-Файлы - файлы, прикрепленные к сообщению
+# $interactionDefer
+
+## Описание
+Создаёт отсрочку для интерактивного ответа, на случай если ответ будет более чем через 3 секунды.
+
+## Использование
+```js
+$interactionDefer
+```
+
+### Опции
+Отсутствуют
 
 ## Пример использования
 ```js
-$interactionUpdate[Текст;{newEmbed:{description:Текст}};{actionRow:{button:Текст:2:customID}}]
+$interactionReply[Сейчас играет - $songInfo[title]]
+$interactionFollowUp
+$playTrack[youtube;$slashOption[track]]
+$interactionDefer
 ```
