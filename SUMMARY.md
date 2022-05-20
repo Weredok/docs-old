@@ -8,7 +8,6 @@
   * [Использование загрузчика команд](introduction/command-handler.md)
   * [Интерактивные взаимодействия](introduction/interaction-commands.md)
   
-* Функции
+* [Functions](functions/usdAddField.md)
 
- * [$addButton](functions/$addButton.md)
- * [$authorID](functions/$authorID.md)
+* [Callbacks](callbacks/ready.md)
