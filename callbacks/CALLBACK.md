@@ -4,7 +4,10 @@
 
 ## Использование
 ```javascript
-code
+bot.onCallback({
+channel: "",
+code: `код`
+})
 ```
 
 ## Тип в загрузчике команд
