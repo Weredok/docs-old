@@ -1,7 +1,7 @@
 # bot.onRoleDelete
 
 ## Описание 
-Реагирует на удаление роли. Для получения её свойств роли используйте функцию [$newRole](functions/usdnewrole). Для старых свойств - [$oldRole](functions/usdoldrole)
+Реагирует на удаление роли. Для получения свойств роли используйте функцию [$oldRole](https://weredok.gitbook.io/docs/functions/usdnewrole).
 
 ## Использование
 ```javascript
