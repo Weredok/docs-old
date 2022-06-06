@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 align="center">Документация aoi.js</h1>
+<h1 align="center">Документация aoi.js.</h1>
 
 <div align="center">
 
